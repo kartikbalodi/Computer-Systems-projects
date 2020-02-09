@@ -1,0 +1,10 @@
+int mul7Div16(int);
+int test_mul7Div16(int);
+int byteSwap(int, int, int);
+int test_byteSwap(int, int, int);
+unsigned floatAbs(unsigned);
+unsigned test_floatAbs(unsigned);
+int floatIsEqual(unsigned, unsigned);
+int test_floatIsEqual(unsigned, unsigned);
+unsigned floatHalf(unsigned);
+unsigned test_floatHalf(unsigned);

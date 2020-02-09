@@ -1,0 +1,14 @@
+int minusOne();
+int test_minusOne();
+int bitAnd(int, int);
+int test_bitAnd(int, int);
+int negate(int);
+int test_negate(int);
+int isEqual(int, int);
+int test_isEqual(int, int);
+int isNegative(int);
+int test_isNegative(int);
+int isIntMin(int);
+int test_isIntMin(int);
+int addOverflow(int, int);
+int test_addOverflow(int, int);

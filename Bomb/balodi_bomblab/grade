@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+curl 'https://easygrade.org/grade?username=balodi&uuid=537b0a92a37c4f38abc7cbcfa3bfd817&lab=bomb'
